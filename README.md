@@ -31,8 +31,8 @@ npm start // For development purposesn(i.e. generate source maps)
 ### Build code
 
 ```
-npm run buil:dev  // For development purposes (i.e. generate source maps)
-npm run buil:prod // For production purposes (i.e. don't generate source maps)
+npm run build:dev  // For development purposes (i.e. generate source maps)
+npm run build:prod // For production purposes (i.e. don't generate source maps)
 ```
 
 ### Lint code
