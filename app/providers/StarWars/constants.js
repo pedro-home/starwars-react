@@ -1,0 +1,8 @@
+const SCOPE = 'providers/StarWars';
+
+export const FETCH_CHARACTERS = `${SCOPE}/FETCH_CHARACTERS`;
+export const FETCH_CHARACTERS_WAITING = `${SCOPE}/FETCH_CHARACTERS_WAITING`;
+export const FETCH_CHARACTERS_SUCCESS = `${SCOPE}/FETCH_CHARACTERS_SUCCESS`;
+export const FETCH_CHARACTERS_FAILURE = `${SCOPE}/FETCH_CHARACTERS_FAILURE`;
+
+export const STARWARS_API_URL = 'https://swapi.co/api/people';
