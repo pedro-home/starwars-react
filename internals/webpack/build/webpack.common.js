@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { BannerPlugin } = require('webpack');
+const { BannerPlugin, DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const __root = process.cwd();
@@ -32,12 +32,19 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.scss$/,
+        test: /\.less$/,
         exclude: /node_modules/,
-        use: ['sass-loader'],
+        use: [
+          {
+            loader: 'less-loader',
+            options: {
+              javascriptEnabled: true,
+            },
+          },
+        ],
       },
       {
-        test: /\.s?css$/,
+        test: /\.(less|css)$/,
         exclude: /node_modules/,
         enforce: 'post',
         use: [
@@ -67,9 +74,13 @@ module.exports = {
     ],
   },
   resolve: {
+    modules: [`${__root}/app`, 'node_modules'],
     extensions: ['.jsx', '.js'],
   },
   plugins: [
+    new DefinePlugin({
+      ENVIRONMENT: process.env.NODE_ENV,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),

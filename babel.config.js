@@ -8,6 +8,7 @@ module.exports = {
       },
     ],
     '@babel/preset-react',
+    'rsuite',
   ],
   plugins: [
     '@babel/plugin-proposal-class-properties',
