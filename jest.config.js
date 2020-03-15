@@ -11,4 +11,5 @@ module.exports = {
   },
   moduleDirectories: ['node_modules', 'app'],
   testRegex: '(__)?tests(__)?/.*\\.test\\.jsx?$',
+  setupFiles: ['<rootDir>/app/__mocks__/globals/index.js'],
 };

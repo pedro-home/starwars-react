@@ -20,6 +20,12 @@ Basic features of the application should include:
 - View all people in the Star Wars universe
 - View the details of every person in the Star Wars universe
 
+### Next steps
+
+- Create an error boundary component
+- Create a lodadable component (e.g. using `react-loadable`)
+- Create a float button to navigate user to the top of the page
+
 ## Commands
 
 ### Start the server
