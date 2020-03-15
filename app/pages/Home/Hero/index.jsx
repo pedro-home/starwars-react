@@ -1,18 +1,20 @@
-import React from 'react';
-import { FlexboxGrid, Col } from 'rsuite';
+import React, { useContext } from 'react';
 import Search from 'containers/Search';
+import Refs from 'contexts/Refs';
 import logo from './assets/logo.png';
 
 const Section = () => {
+  const { setHero } = useContext(Refs);
   return (
-    <section className="hero">
+    <section
+      className="section hero"
+      ref={elem => {
+        setHero(elem);
+      }}
+    >
       <div className="center-container">
-        <FlexboxGrid justify="center">
-          <FlexboxGrid.Item componentClass={Col} md={12}>
-            <img className="logo" src={logo} />
-            <Search />
-          </FlexboxGrid.Item>
-        </FlexboxGrid>
+        <img className="logo" src={logo} />
+        <Search />
       </div>
     </section>
   );

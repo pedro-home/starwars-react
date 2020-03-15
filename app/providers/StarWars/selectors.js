@@ -12,11 +12,20 @@ const getData = () =>
       .map(entry => ({
         name: entry.get('name'),
         gender: entry.get('gender'),
-        height: entry.get('height'),
-        mass: entry.get('mass'),
-        lastUpdate: entry.get('last_update'),
+        height:
+          entry.get('height') !== 'unknown'
+            ? new Intl.NumberFormat(navigator.language, { style: 'unit', unit: 'meter' }).format(
+                entry.get('height') / 100,
+              )
+            : 'unknown',
+        weight:
+          entry.get('mass') !== 'unknown'
+            ? new Intl.NumberFormat(navigator.language, { style: 'unit', unit: 'kilogram' }).format(entry.get('mass'))
+            : 'unknown',
       }))
       .toJS(),
   );
 
-export { isWaiting, getErrorMessage, getData };
+const getNextFetch = () => createSelector(selectState, state => state.get('next'));
+
+export { isWaiting, getErrorMessage, getData, getNextFetch };

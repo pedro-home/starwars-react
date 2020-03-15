@@ -3,6 +3,7 @@ import {
   FETCH_CHARACTERS_WAITING,
   FETCH_CHARACTERS_FAILURE,
   FETCH_CHARACTERS_SUCCESS,
+  RESET_FETCH_CHARACTERS,
 } from './constants';
 
 export function fetchCharacters(filter) {
@@ -18,10 +19,13 @@ export function fetchCharactersWaiting() {
   };
 }
 
-export function fetchCharactersSuccess(data) {
+export function fetchCharactersSuccess(data = [], nextParams = {}) {
   return {
     type: FETCH_CHARACTERS_SUCCESS,
-    payload: data,
+    payload: {
+      data,
+      next: nextParams,
+    },
   };
 }
 
@@ -29,5 +33,11 @@ export function fetchCharactersFailure(message) {
   return {
     type: FETCH_CHARACTERS_FAILURE,
     payload: message,
+  };
+}
+
+export function resetCharacters() {
+  return {
+    type: RESET_FETCH_CHARACTERS,
   };
 }

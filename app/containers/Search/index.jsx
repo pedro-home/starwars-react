@@ -1,15 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchCharacters } from 'providers/StarWars/actions';
+import { fetchCharacters, resetCharacters } from 'providers/StarWars/actions';
 import Search from 'components/Search';
 
-const Container = ({ fetchCharacters }) => {
-  return <Search onClick={(_event, value) => fetchCharacters(value)} />;
+const Container = ({ fetch, reset }) => {
+  return <Search fetch={fetch} reset={reset} />;
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchCharacters: filter => dispatch(fetchCharacters(filter)),
+    fetch: filter => dispatch(fetchCharacters(filter)),
+    reset: () => dispatch(resetCharacters()),
   };
 }
 

@@ -2,10 +2,22 @@ html {
   overflow: visible;
 }
 
+body {
+  min-height: 100vh;
+  overflow: auto;
+  background-image: url('./assets/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section {
+  padding: 0 2rem;
+}
+
 .center-container {
   top: 50%;
   left: 50%;
-  position: relative;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
 
