@@ -21,28 +21,50 @@ describe('Given starWarSaga', () => {
   });
 
   describe('When fetchCharactersAPI is called', () => {
-    beforeEach(() => {
-      recordSaga(fetchCharactersAPI, fetchCharacters);
+    describe('And receiving successfuly content', () => {
+      beforeEach(() => {
+        recordSaga(fetchCharactersAPI, fetchCharacters);
+      });
+
+      it('And should have next actions', () => {
+        expect(nextActions.length).toBeGreaterThanOrEqual(1);
+      });
+
+      it('And should have a fetchCharactersWaiting', () => {
+        expect(nextActions).toContainEqual(fetchCharactersWaiting());
+      });
+
+      it('And should have a fetchCharactersSuccess', () => {
+        expect(nextActions).toContainEqual(fetchCharactersSuccess());
+      });
     });
 
-    it('Then should fetch api content', () => {
-      expect(true).toEqual(false);
-    });
+    describe('And receiving an error', () => {
+      let headers;
+      beforeEach(() => {
+        recordSaga(fetchCharactersAPI, fetchCharacters);
+        headers = {
+          status: 404,
+          statusText: 'Not Found',
+          headers: {
+            'Content-type': 'application/json',
+          },
+        };
 
-    it('And should have next actions', () => {
-      expect(nextActions.length).toBeGreaterThanOrEqual(1);
-    });
+        fetch.mockResponseOnce(undefined, headers);
+      });
 
-    it('And should have a fetchCharactersWaiting', () => {
-      expect(nextActions).toContainEqual(fetchCharactersWaiting());
-    });
+      it('Then should have next actions', () => {
+        expect(nextActions.length).toBeGreaterThanOrEqual(1);
+      });
 
-    it('And should have a fetchCharactersSuccess', () => {
-      expect(nextActions).toContainEqual(fetchCharactersSuccess());
-    });
+      it('And should have a fetchCharactersWaiting', () => {
+        expect(nextActions).toContainEqual(fetchCharactersWaiting());
+      });
 
-    it('And should have a fetchCharactersFailure', () => {
-      expect(nextActions).toContainEqual(fetchCharactersFailure());
+      it('And should have a fetchCharactersFailure', () => {
+        expect(nextActions).toContainEqual(fetchCharactersFailure(`${headers.status}: ${headers.statusText}`));
+      });
     });
   });
 });

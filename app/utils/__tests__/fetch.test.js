@@ -2,10 +2,6 @@ import fetchData from '../fetch';
 
 describe('Given utils', () => {
   describe('When fetchData is called', () => {
-    beforeEach(() => {
-      fetch.resetMocks();
-    });
-
     describe('And handles a successful response', () => {
       let data;
       let textData;

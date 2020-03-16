@@ -1,7 +1,7 @@
 module.exports = {
   testEnvironment: 'jsdom',
   collectCoverage: true,
-  collectCoverageFrom: ['app/**/*.jsx?'],
+  collectCoverageFrom: ['app/**/*.{js,jsx}'],
   coverageThreshold: {
     global: {
       statements: 75,
