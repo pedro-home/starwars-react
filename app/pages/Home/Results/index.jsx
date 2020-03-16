@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
 import Refs from 'contexts/Refs';
+import Section from 'components/Section';
 import ListCharacters from 'containers/ListCharacters';
 
-const Section = () => {
+const Component = () => {
   const { setResults } = useContext(Refs);
   return (
-    <section
-      className="section results"
-      ref={elem => {
+    <Section
+      name="results"
+      onRef={elem => {
         setResults(elem);
       }}
     >
       <ListCharacters />
-    </section>
+    </Section>
   );
 };
 
-export default Section;
+export default Component;

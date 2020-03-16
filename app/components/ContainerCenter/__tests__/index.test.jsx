@@ -8,10 +8,13 @@ describe('Given <ContainerCenter />', () => {
   let defaultProps;
   let text;
 
+  beforeAll(() => {
+    text = 'Hello';
+    defaultProps = { children: <span>{text}</span> };
+  });
+
   describe('When initializes', () => {
     beforeEach(() => {
-      text = 'Hello';
-      defaultProps = { children: <span>{text}</span> };
       const { container } = render(<ContainerCenter {...defaultProps} />);
       component = container;
     });
