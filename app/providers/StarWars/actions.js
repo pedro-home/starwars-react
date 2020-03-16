@@ -29,7 +29,7 @@ export function fetchCharactersSuccess(data = [], nextParams = {}) {
   };
 }
 
-export function fetchCharactersFailure(message) {
+export function fetchCharactersFailure(message = '') {
   return {
     type: FETCH_CHARACTERS_FAILURE,
     payload: message,

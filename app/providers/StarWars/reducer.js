@@ -10,7 +10,7 @@ export const initialState = fromJS({
   data: [],
   next: {},
   isWaiting: false,
-  error: undefined,
+  error: '',
 });
 
 const reducer = (state = initialState, { type, payload }) => {

@@ -30,7 +30,7 @@ describe('Given starWarsReducer', () => {
 
     it('And should update error', () => {
       const action = fetchCharactersSuccess();
-      expect(starWarsReducer(initialState, action)).toEqual(initialState.set('error', undefined));
+      expect(starWarsReducer(initialState, action)).toEqual(initialState.set('error', ''));
     });
   });
 

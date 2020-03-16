@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given <ListCharacters /> When initializes Then should match the snapshot 1`] = `
+<div>
+  <div
+    class="center-container"
+  >
+    <h4
+      class="quote"
+    >
+      <q>
+        Search your feelings, you know you to be true
+      </q>
+    </h4>
+  </div>
+</div>
+`;

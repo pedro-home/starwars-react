@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given <Home /> When initializes Then should match the snapshot 1`] = `
+<div>
+  <div
+    data-page="home"
+  >
+    <section
+      class="section hero"
+    >
+      <div
+        class="center-container"
+      >
+        <img
+          class="logo"
+          src="[object Object]"
+        />
+        <div
+          class="rs-input-group search rs-input-group-inside"
+        >
+          <input
+            class="rs-input"
+            placeholder="Search databank..."
+            type="text"
+            value=""
+          />
+          <a
+            class="rs-btn rs-btn-default rs-input-group-btn"
+          >
+            <i
+              class="rs-icon rs-icon-search"
+            />
+            <span
+              class="rs-ripple-pond"
+            >
+              <span
+                class="rs-ripple"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section results"
+    >
+      <div
+        class="center-container"
+      >
+        <h4
+          class="quote"
+        >
+          <q>
+            Search your feelings, you know you to be true
+          </q>
+        </h4>
+      </div>
+    </section>
+  </div>
+</div>
+`;

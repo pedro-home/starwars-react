@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Input, InputGroup, Icon } from 'rsuite';
+import PropTypes from 'prop-types';
 import Refs from 'contexts/Refs';
 
 const Component = ({ fetch, reset }) => {
@@ -7,7 +8,7 @@ const Component = ({ fetch, reset }) => {
   const { results } = useContext(Refs);
 
   return (
-    <InputGroup inside>
+    <InputGroup inside className="search">
       <Input
         placeholder="Search databank..."
         onChange={value => {
@@ -32,6 +33,15 @@ const Component = ({ fetch, reset }) => {
       </InputGroup.Button>
     </InputGroup>
   );
+};
+
+Component.defaultProps = {
+  reset: () => {},
+};
+
+Component.propTypes = {
+  fetch: PropTypes.func.isRequired,
+  reset: PropTypes.func,
 };
 
 export default Component;

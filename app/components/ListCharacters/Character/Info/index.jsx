@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlexboxGrid } from 'rsuite';
+import PropTypes from 'prop-types';
 
 const Component = ({ type, value }) => {
   return (
@@ -12,6 +13,11 @@ const Component = ({ type, value }) => {
       </FlexboxGrid.Item>
     </FlexboxGrid>
   );
+};
+
+Component.propTypes = {
+  type: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default Component;

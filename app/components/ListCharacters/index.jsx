@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { FlexboxGrid, Loader, Col, Grid } from 'rsuite';
+import { FlexboxGrid, Loader, Col } from 'rsuite';
+import PropTypes from 'prop-types';
 import Quote from 'components/Quote';
 import Character from './Character';
 import { getCharacterImage, hasEndedScroll } from './utils';
@@ -40,7 +41,7 @@ const Component = ({ error, data, isLoading, nextFetch, fetch }) => {
     </>
   );
 
-  if (data.length === 0 && !isLoading) {
+  if (error !== '' || (data.length === 0 && !isLoading)) {
     component = (
       <div className="center-container">
         <Quote text="Search your feelings, you know you to be true" />
@@ -53,6 +54,17 @@ const Component = ({ error, data, isLoading, nextFetch, fetch }) => {
 
 Component.defaultProps = {
   data: [],
+  isLoading: false,
+  fetch: () => {},
+  error: '',
+};
+
+Component.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+  isLoading: PropTypes.bool,
+  error: PropTypes.string,
+  nextFetch: PropTypes.object,
+  fetch: PropTypes.func,
 };
 
 export default Component;

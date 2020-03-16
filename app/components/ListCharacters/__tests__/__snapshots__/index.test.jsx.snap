@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given <ListCharacters /> When gets data Then should match the snapshot 1`] = `
+<div>
+  <div
+    class="rs-flex-box-grid list-characters rs-flex-box-grid-top rs-flex-box-grid-start"
+  >
+    <div
+      class="rs-flex-box-grid-item rs-flex-box-grid-item-24 rs-col rs-col-sm-12 rs-col-md-6"
+    >
+      <div
+        class="character rs-panel rs-panel-default rs-panel-shaded"
+      >
+        <div
+          class="rs-panel-body rs-panel-body-fill"
+        >
+          <img
+            class="character-image"
+            src="[object Object]"
+          />
+          <div
+            class="rs-list"
+          >
+            <div
+              class="rs-list-item character-entry rs-list-item-md"
+              manager="[object Object]"
+            >
+              <div
+                class="rs-list-item-content"
+              >
+                <h6
+                  class="title"
+                >
+                  Test
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="rs-flex-box-grid-item rs-flex-box-grid-item-24 rs-col rs-col-sm-12 rs-col-md-6"
+    >
+      <div
+        class="character rs-panel rs-panel-default rs-panel-shaded"
+      >
+        <div
+          class="rs-panel-body rs-panel-body-fill"
+        >
+          <img
+            class="character-image"
+            src="[object Object]"
+          />
+          <div
+            class="rs-list"
+          >
+            <div
+              class="rs-list-item character-entry rs-list-item-md"
+              manager="[object Object]"
+            >
+              <div
+                class="rs-list-item-content"
+              >
+                <h6
+                  class="title"
+                >
+                  Test2
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Given <ListCharacters /> When has an error Then should match the snapshot 1`] = `
+<div>
+  <div
+    class="center-container"
+  >
+    <h4
+      class="quote"
+    >
+      <q>
+        Search your feelings, you know you to be true
+      </q>
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Given <ListCharacters /> When initializes Then should match the snapshot 1`] = `
+<div>
+  <div
+    class="center-container"
+  >
+    <h4
+      class="quote"
+    >
+      <q>
+        Search your feelings, you know you to be true
+      </q>
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Given <ListCharacters /> When is loading Then should match the snapshot 1`] = `
+<div>
+  <div
+    class="rs-flex-box-grid list-characters rs-flex-box-grid-top rs-flex-box-grid-start"
+  >
+    <div
+      class="rs-flex-box-grid-item rs-flex-box-grid-item-24 rs-col"
+    >
+      <div
+        class="rs-loader-wrapper rs-loader-speed-normal rs-loader-center rs-loader-has-content"
+      >
+        <div
+          class="rs-loader"
+        >
+          <span
+            class="rs-loader-spin"
+          />
+          <span
+            class="rs-loader-content"
+          >
+            loading...
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

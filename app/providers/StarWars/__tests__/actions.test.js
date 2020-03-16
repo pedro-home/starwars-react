@@ -75,6 +75,7 @@ describe('Given starWarsActions', () => {
     it('Then should create a fetchCharactersFailure action', () => {
       const action = {
         type: FETCH_CHARACTERS_FAILURE,
+        payload: '',
       };
 
       expect(fetchCharactersFailure()).toEqual(action);
