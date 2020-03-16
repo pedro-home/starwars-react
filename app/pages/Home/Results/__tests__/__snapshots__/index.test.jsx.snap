@@ -6,7 +6,7 @@ exports[`Given <Results /> When initializes Then should match the snapshot 1`] =
     class="section results"
   >
     <div
-      class="center-container"
+      class="container-center"
     >
       <h4
         class="quote"

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { FlexboxGrid, Loader, Col } from 'rsuite';
 import PropTypes from 'prop-types';
 import Quote from 'components/Quote';
+import ContainerCenter from 'components/ContainerCenter';
 import Character from './Character';
 import { getCharacterImage, hasEndedScroll } from './utils';
 
@@ -43,9 +44,9 @@ const Component = ({ error, data, isLoading, nextFetch, fetch }) => {
 
   if (error !== '' || (data.length === 0 && !isLoading)) {
     component = (
-      <div className="center-container">
+      <ContainerCenter>
         <Quote text="Search your feelings, you know you to be true" />
-      </div>
+      </ContainerCenter>
     );
   }
 

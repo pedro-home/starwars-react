@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Search from 'containers/Search';
+import ContainerCenter from 'components/ContainerCenter';
 import Refs from 'contexts/Refs';
 import logo from './assets/logo.png';
 
@@ -12,10 +13,10 @@ const Section = () => {
         setHero(elem);
       }}
     >
-      <div className="center-container">
+      <ContainerCenter>
         <img className="logo" src={logo} />
         <Search />
-      </div>
+      </ContainerCenter>
     </section>
   );
 };

@@ -80,7 +80,7 @@ exports[`Given <ListCharacters /> When gets data Then should match the snapshot 
 exports[`Given <ListCharacters /> When has an error Then should match the snapshot 1`] = `
 <div>
   <div
-    class="center-container"
+    class="container-center"
   >
     <h4
       class="quote"
@@ -96,7 +96,7 @@ exports[`Given <ListCharacters /> When has an error Then should match the snapsh
 exports[`Given <ListCharacters /> When initializes Then should match the snapshot 1`] = `
 <div>
   <div
-    class="center-container"
+    class="container-center"
   >
     <h4
       class="quote"

@@ -26,7 +26,7 @@ describe('Given <ListCharacters />', () => {
     });
 
     it('And should render a center container', () => {
-      expect(component.querySelector('.center-container')).toBeTruthy();
+      expect(component.querySelector('.container-center')).toBeTruthy();
     });
 
     it('And should render a quote', () => {

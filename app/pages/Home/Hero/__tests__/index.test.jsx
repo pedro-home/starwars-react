@@ -16,6 +16,10 @@ describe('Given <Hero />', () => {
       expect(component).toMatchSnapshot();
     });
 
+    it('And should render a center container', () => {
+      expect(component.querySelector('.container-center')).toBeTruthy();
+    });
+
     it('And should render a logo', () => {
       expect(component.querySelector('.logo')).toBeTruthy();
     });
