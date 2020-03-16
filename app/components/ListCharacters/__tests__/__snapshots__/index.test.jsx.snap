@@ -16,7 +16,7 @@ exports[`Given <ListCharacters /> When gets data Then should match the snapshot 
         >
           <img
             class="character-image"
-            src="[object Object]"
+            src="droid.jpg"
           />
           <div
             class="rs-list"
@@ -50,7 +50,7 @@ exports[`Given <ListCharacters /> When gets data Then should match the snapshot 
         >
           <img
             class="character-image"
-            src="[object Object]"
+            src="droid.jpg"
           />
           <div
             class="rs-list"

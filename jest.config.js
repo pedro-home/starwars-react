@@ -16,7 +16,9 @@ module.exports = {
   moduleDirectories: ['node_modules', 'app'],
   testRegex: '(__)?tests(__)?/.*\\.test\\.jsx?$',
   setupFiles: ['<rootDir>/app/__mocks__/globals/index.js'],
-  moduleNameMapper: {
-    '\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$': '<rootDir>/app/__mocks__/media.js',
+  transform: {
+    '\\.(jsx?)$': ['babel-jest', { rootMode: 'upward' }],
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/app/__mocks__/media.js',
   },
 };

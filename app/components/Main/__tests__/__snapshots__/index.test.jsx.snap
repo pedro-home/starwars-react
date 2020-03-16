@@ -22,7 +22,7 @@ exports[`Given <Main /> When initializes Then should match the snapshot 1`] = `
             >
               <img
                 class="logo"
-                src="[object Object]"
+                src="logo.png"
               />
               <div
                 class="rs-input-group search rs-input-group-inside"

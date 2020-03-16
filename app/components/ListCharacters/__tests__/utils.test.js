@@ -11,7 +11,7 @@ describe('Given listCharacterUtils', () => {
       });
 
       it('Then should return the corresponding image', () => {
-        expect(getCharacterImage(gender)).toEqual('');
+        expect(getCharacterImage(gender)).toEqual(maleLogo);
       });
     });
 
