@@ -4,6 +4,10 @@
 
 With API from swapi.co, build a single page application where users can view the details about all the people in the Star Wars Universe.
 
+## Demo
+
+To check the live solution click [here](https://pedro-home.github.io/starwars-react/).
+
 ## Step-by-step guide
 
 Open your terminal and execute the following commands

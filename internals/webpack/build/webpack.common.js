@@ -21,6 +21,7 @@ module.exports = {
   output: {
     path: `${__root}/dist`,
     filename: '[name].js',
+    publicPath: './',
   },
   target: 'web',
   module: {
@@ -50,7 +51,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../',
+              publicPath: './',
             },
           },
           {
