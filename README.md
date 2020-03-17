@@ -6,7 +6,7 @@ With API from swapi.co, build a single page application where users can view the
 
 ## Demo
 
-To check the live solution click [here](https://pedro-home.github.io/starwars-react/).
+To check the live production solution click [here](https://pedro-home.github.io/starwars-react/).
 
 ## Step-by-step guide
 
