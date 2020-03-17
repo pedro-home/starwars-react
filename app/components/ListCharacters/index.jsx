@@ -8,7 +8,7 @@ import { getCharacterImage, hasEndedScroll } from './utils';
 
 const Component = ({ error, data, isLoading, nextFetch, fetch }) => {
   useEffect(() => {
-    if (!nextFetch) {
+    if (Object.keys(nextFetch).length === 0) {
       return;
     }
 
@@ -58,6 +58,7 @@ Component.defaultProps = {
   isLoading: false,
   fetch: () => {},
   error: '',
+  nextFetch: {},
 };
 
 Component.propTypes = {
