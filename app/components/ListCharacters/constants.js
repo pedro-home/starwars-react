@@ -1,1 +1,1 @@
-export const OFFSET_SCROLL = 50;
+export const OFFSET_SCROLL = 200;

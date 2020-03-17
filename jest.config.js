@@ -11,7 +11,7 @@ module.exports = {
     },
   },
   globals: {
-    ENVIRONMENT: 'test',
+    ENVIRONMENT: process.env.NODE_ENV,
   },
   moduleDirectories: ['node_modules', 'app'],
   testRegex: '(__)?tests(__)?/.*\\.test\\.jsx?$',
