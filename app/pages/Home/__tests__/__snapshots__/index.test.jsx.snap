@@ -3,7 +3,7 @@
 exports[`Given <Home /> When initializes Then should match the snapshot 1`] = `
 <div>
   <div
-    data-page="home"
+    class="page home"
   >
     <section
       class="section hero"

@@ -1,15 +1,15 @@
 import React from 'react';
-
+import Page from 'components/Page';
 import Hero from './Hero';
 import Results from './Results';
 
-const Page = () => {
+const Component = () => {
   return (
-    <div data-page="home">
+    <Page name="home">
       <Hero />
       <Results />
-    </div>
+    </Page>
   );
 };
 
-export default Page;
+export default Component;

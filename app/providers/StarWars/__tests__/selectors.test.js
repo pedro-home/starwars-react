@@ -60,7 +60,7 @@ describe('Given starWarSelectors', () => {
 
   describe('When getNextFetch is called', () => {
     it('Then should return next value', () => {
-      expect(getNextFetch().resultFunc(initialState)).toEqual(initialState.get('next'));
+      expect(getNextFetch().resultFunc(initialState)).toEqual(initialState.get('next').toJS());
     });
   });
 });

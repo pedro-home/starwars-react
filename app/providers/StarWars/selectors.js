@@ -26,6 +26,6 @@ const getData = () =>
       .toJS(),
   );
 
-const getNextFetch = () => createSelector(selectState, state => state.get('next'));
+const getNextFetch = () => createSelector(selectState, state => state.get('next').toJS());
 
 export { isWaiting, getErrorMessage, getData, getNextFetch };

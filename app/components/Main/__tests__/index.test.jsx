@@ -21,7 +21,7 @@ describe('Given <Main />', () => {
     });
 
     it('And should render the home page', () => {
-      expect(component.querySelector('[data-page="home"]')).toBeTruthy();
+      expect(component.querySelector('.home')).toBeTruthy();
     });
   });
 });
