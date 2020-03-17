@@ -21,7 +21,6 @@ module.exports = {
   output: {
     path: `${__root}/dist`,
     filename: '[name].js',
-    publicPath: '/',
   },
   target: 'web',
   module: {
@@ -79,7 +78,7 @@ module.exports = {
   },
   plugins: [
     new DefinePlugin({
-      ENVIRONMENT: process.env.NODE_ENV,
+      ENVIRONMENT: JSON.stringify(process.env.NODE_ENV),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',

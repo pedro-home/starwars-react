@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
-const build = require('../build/webpack.dev');
+const build = require('../build/webpack.development');
 
 const PORT = 3000;
 
