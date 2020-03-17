@@ -7,6 +7,19 @@ const Component = ({ fetch, reset }) => {
   const [value, setValue] = useState('');
   const { results } = useContext(Refs);
 
+  const execute = () => {
+    reset();
+
+    if (results) {
+      window.scrollTo({
+        top: results.offsetTop,
+        behavior: 'smooth',
+      });
+
+      fetch({ search: value });
+    }
+  };
+
   return (
     <InputGroup inside className="search">
       <Input
@@ -14,21 +27,11 @@ const Component = ({ fetch, reset }) => {
         onChange={value => {
           setValue(value);
         }}
-      />
-      <InputGroup.Button
-        onClick={() => {
-          reset();
-
-          if (results) {
-            window.scrollTo({
-              top: results.offsetTop,
-              behavior: 'smooth',
-            });
-
-            fetch({ search: value });
-          }
+        onPressEnter={event => {
+          execute();
         }}
-      >
+      />
+      <InputGroup.Button onClick={execute}>
         <Icon icon="search" />
       </InputGroup.Button>
     </InputGroup>
